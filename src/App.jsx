@@ -6,6 +6,8 @@ import NoPage from "./pages/noPage/NoPage";
 import Order from "./pages/order/Order";
 import Home from "./pages/home/Home";
 import Cart from "./pages/cart/Cart";
+import Login from "./pages/registration/Login";
+import Signup from "./pages/registration/Signup";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/order" element={<Order />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/*" element={<NoPage />} />
           </Routes>
         </Router>
