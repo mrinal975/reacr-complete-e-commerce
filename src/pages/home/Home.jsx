@@ -13,6 +13,7 @@ import { addToCart, deleteFromCart } from "../../redux/cartSlice";
 function Home() {
   const dispatch = useDispatch();
   const cartItem = useSelector((state) => state.cart);
+  console.log(cartItem);
   const addCart = () => {
     dispatch(addToCart("Shirt"));
   };
@@ -24,8 +25,18 @@ function Home() {
     <>
       <Layout>
         <div className="flex gap-5 justify-center">
-          <button onClick={addCart}>Add</button>
-          <button onClick={addCart}>Remove</button>
+          <button
+            className="p-4 hover:pointer bg-gray-300 text-red-500"
+            onClick={addCart}
+          >
+            Add
+          </button>
+          <button
+            className="p-4 hover:pointer bg-gray-300 text-red-500"
+            onClick={deleteCart}
+          >
+            Remove
+          </button>
         </div>
         <HeroSection />
         <Filter />
