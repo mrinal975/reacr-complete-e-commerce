@@ -7,6 +7,7 @@ import Filter from "../../components/filter/Filter";
 import ProductCard from "../../components/productCard/ProductCard";
 import Track from "../../components/track/Track";
 import Testimonial from "../../components/testimonial/Testimonial";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
   const context = useContext(MyContext);
@@ -19,6 +20,7 @@ function Home() {
         <ProductCard />
         <Track />
         <Testimonial />
+        <Footer />
       </Layout>
     </>
   );
