@@ -15,7 +15,9 @@ function Signup() {
   const context = useContext(myContext);
   const { loading, setLoading } = context;
 
-  const signup = async () => {
+  const signup = async (e) => {
+    e.preventDefault();
+
     if (name === "" || email === "" || password === "") {
       return toast.error("All fields are required");
     }
